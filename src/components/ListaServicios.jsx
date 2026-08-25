@@ -8,7 +8,6 @@ const servicios = [
 ];
 
 function ListaServicios() {
-  // Renderizado condicional simple
   if (servicios.length === 0) {
     return <p>No hay servicios disponibles.</p>;
   }
