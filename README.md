@@ -1,16 +1,14 @@
-# React + Vite
+# Proyecto Capstone - Frontend en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Este proyecto corresponde a la interfaz cliente desarrollada en React + Vite para el proyecto capstone del curso.
 
-Currently, two official plugins are available:
+## Endpoints Consumidos
+- `GET https://jsonplaceholder.typicode.com/posts`: Se consumió este endpoint de prueba para simular los datos de la página principal mientras se implementa la API backend en Django REST Framework.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Manejo de Estados
+- `cargando` (useState): Controla la pantalla de espera mientras se realiza la llamada asíncrona mediante `fetch`.
+- `error` (useState): Captura fallos de red o HTTP mediante `try/catch` para ofrecer retroalimentación al usuario.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Mapa de Componentes
+- `App`: Componente contenedor principal.
+  - `Home`: Página de inicio que obtiene y renderiza la lista de elementos simulados.
